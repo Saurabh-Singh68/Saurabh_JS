@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JavaScript Projects</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    section { margin-bottom: 30px; padding: 15px; border: 1px solid #ccc; border-radius: 10px; }
+    .feedback-card, .entry { background: #f4f4f4; padding: 10px; margin-top: 10px; border-radius: 5px; }
+    .hold.dark { background-color: #222; color: white; padding: 10px; }
+  </style>
+</head>
+<body>
+<link rel="stylesheet" href="style.css" />
+  <h1>JavaScript Functions Showcase</h1>
+ <div class="grid-container">
+  <!-- Alert -->
+  <section>
+  <h2>Welcome Alert</h2>
+  <button onclick="showWelcome()">Click Me</button>
+  <script>
+    function showWelcome() {
+      alert("Welcome to the JavaScript Functions Showcase!");
+      location.reload(); // Refreshes the page
+    }
+  </script>
+</section>
+
+  <!-- Bulb Toggle -->
+  <!-- Bulb Toggle -->
+<section>
+  <h2>Light Bulb</h2>
+  <img id="lightbulb" src="https://i.pinimg.com/564x/e0/fd/25/e0fd25f9127a9a109a0648c83ee61643.jpg" width="100" alt="Light Bulb">
+  <br><button onclick="toggleLight()">Toggle Light</button>
+  <script src="bulb.js"></script>
+</section>
+
+
+  <!-- Calculator -->
+  <section>
+    <h2>Calculator</h2>
+    <input id="num2" type="number" placeholder="Number 1" />
+    <input id="num3" type="number" placeholder="Number 2" />
+    <select id="operation">
+      <option value="add">Add</option>
+      <option value="subtract">Subtract</option>
+      <option value="multiply">Multiply</option>
+      <option value="divide">Divide</option>
+    </select>
+    <button onclick="calculate()">Calculate</button>
+    <div id="output7"></div>
+    <script src="calc.js"></script>
+  </section>
+
+ 
+  <!-- RGB Color Box -->
+  <section>
+    <h2>RGB Color Box</h2>
+    R: <input id="red" type="range" min="0" max="255" oninput="updateColor()" />
+    G: <input id="green" type="range" min="0" max="255" oninput="updateColor()" />
+    B: <input id="blue" type="range" min="0" max="255" oninput="updateColor()" />
+    <div id="colorBox" style="width:100px; height:100px; border:1px solid; margin-top:10px;"></div>
+    <p>R: <span id="redValue">0</span> G: <span id="greenValue">0</span> B: <span id="blueValue">0</span></p>
+    <script src="colors.js"></script>
+  </section>
+
+  <!-- Feedback Form -->
+  <section>
+    <h2>Feedback</h2>
+    <input id="feedbackName" placeholder="Your Name" /><br>
+    <input id="rating" placeholder="Rating (1-5)" /><br>
+    <textarea id="feedback" placeholder="Your Feedback"></textarea><br>
+    <button onclick="submitFeedback()">Submit</button>
+    <div id="feedbackList"></div>
+    <script src="feedback.js"></script>
+  </section>
+
+  <!-- Grade Calculator -->
+  <section>
+    <h2>Grade Calculator</h2>
+    <input id="marks" type="number" placeholder="Enter Marks" />
+    <button onclick="calculateGrade()">Get Grade</button>
+    <div id="result"></div>
+    <script src="grade.js"></script>
+  </section>
+
+  <!-- Journal -->
+  <section>
+    <h2>Journal</h2>
+    <textarea id="journalEntry" placeholder="Write your journal here..."></textarea><br>
+    <button onclick="saveEntry()">Save Entry</button>
+    <div id="entries"></div>
+    <script src="journal.js"></script>
+  </section>
+
+  <!-- Multiplication Table -->
+  <section>
+    <h2>Multiplication Table</h2>
+    <input id="n" type="number" placeholder="Enter number" />
+    <button onclick="getTable()">Show Table</button>
+    <div id="output3"></div>
+    <script src="multiplicationTable.js"></script>
+  </section>
+
+  <!-- Arithmetic & Logical Operations -->
+  <section>
+    <h2>Math & Logical Operations</h2>
+    <input id="inputA" type="number" placeholder="a" />
+    <input id="inputB" type="number" placeholder="b" />
+    <button onclick="performOperations()">Perform</button>
+    <div id="output1"></div>
+    <script src="operations.js"></script>
+  </section>
+
+  <!-- Quotes & DOM Manipulation -->
+  <section>
+    <h2>Quote & DOM Toggle</h2>
+    <h3 id="domHeading">Click the buttons below</h3>
+    <button onclick="changeHeading()">Change Quote</button>
+    <button onclick="addNewParagraph()">Add Paragraph</button>
+    <div id="domContent"></div>
+    <button id="darkmodetoggle">Toggle Dark Mode</button>
+    <img id="toggle-dark-mode" src="https://static.vecteezy.com/system/resources/previews/001/401/677/non_2x/abstract-polygonal-shape-black-background-free-vector.jpg" style="display:none;" />
+    <script src="quoteDMtoggle.js"></script>
+  </section>
+
+  <!-- Password Visibility -->
+  <section>
+    <h2>Password Visibility Toggle</h2>
+    <input id="passwords" type="password" placeholder="Enter password" />
+    <button onclick="togglePassword()">Show Password</button>
+    <script src="showpass.js"></script>
+  </section>
+
+  <!-- Digital Clock -->
+  <section>
+    <h2>Digital Clock</h2>
+    <div id="clock">00:00:00</div>
+    <button id="toggleClock">Start Clock</button>
+    <script src="timer.js"></script>
+  </section>
+
+  <!-- User Preferences -->
+  <section>
+    <h2>User Preferences</h2>
+    <select id="themeSelect">
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+    <select id="fontSizeSelect">
+      <option value="16px">16px</option>
+      <option value="18px">18px</option>
+      <option value="20px">20px</option>
+    </select>
+    <button onclick="savePreferences()">Save Preferences</button>
+    <div class="hold" id="demoText">Sample text</div>
+    <script src="userpreference.js"></script>
+  </section>
+
+  <!-- User Profile -->
+  <section>
+    <h2>User Profile</h2>
+    <input id="name1" placeholder="Your Name" />
+    <input id="age" type="number" placeholder="Age" />
+    <select id="isStudent">
+      <option value="true">Yes</option>
+      <option value="false">No</option>
+    </select>
+    <button onclick="displayProfile()">Show Profile</button>
+    <div id="output5"></div>
+    <script src="userprofile.js"></script>
+  </section>
+</div>
+</body>
+</html>
